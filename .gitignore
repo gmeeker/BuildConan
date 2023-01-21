@@ -1,0 +1,4 @@
+*.pyc
+/build
+/dist
+PackageBuilder.egg-info
