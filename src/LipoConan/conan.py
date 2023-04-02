@@ -87,6 +87,8 @@ def conan_install(args, profiles=(), filenames=None):
             name = f"{recipe['name']}/{recipe['version']}"
             if recipe['user'] and recipe['channel']:
                 name += f"@{recipe['user']}/{recipe['channel']}"
+            if not i['packages']:
+                continue
             assert len(i['packages']) == 1
             package = i['packages'][0]
             try:
